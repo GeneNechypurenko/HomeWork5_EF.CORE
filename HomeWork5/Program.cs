@@ -98,17 +98,6 @@ namespace HomeWork5
                 Console.WriteLine("-----------------------------------------------");
             }
 
-            //8
-            using (var db = new UniversityDbContext())
-            {
-                var averageAge = db.Students
-                    .Select(student => DateTime.Now.Year - student.DateOfBirth.Year)
-                    .Average();
-
-                Console.WriteLine($"Average Age of Students: {averageAge}");
-                Console.WriteLine("-----------------------------------------------");
-            }
-
             //9
             using (var db = new UniversityDbContext())
             {
